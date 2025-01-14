@@ -1,0 +1,86 @@
+body {
+    background-image: url('https://attractionsmagazine.com/wp-content/uploads/2023/07/Enchanted-Kingdom-Photo-courtesy-of-Enchanted-Kingdom.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 1317px;
+    height: 697px;
+    background: rgba(236, 236, 236, 0.9); /* Set opacity to 70% */
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.letter-content {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.56em;
+    font-weight: bold;
+    color: #000;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 90%;
+}
+.tooltip-container {
+    --background: linear-gradient(45deg, #1f9df5, #22d3ee);
+    position: absolute;
+    bottom: 20px;
+    left: 210px;
+    background: var(--background);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 17px;
+    padding: 0.7em 1.8em;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+}
+
+.tooltip {
+    position: absolute;
+    top: -45px; /* Adjusted to prevent screen movement */
+    left: 50%;
+    transform: translateX(-50%) scale(0.8);
+    transform-origin: bottom;
+    padding: 0.3em 0.6em;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    background: var(--background);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tooltip::before {
+    position: absolute;
+    content: "";
+    height: 0.6em;
+    width: 0.6em;
+    bottom: -0.2em;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    background: var(--background);
+}
+
+.tooltip-container:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) scale(1);
+}
+
+.tooltip-container:hover {
+    transform: scale(0.9);
+}
